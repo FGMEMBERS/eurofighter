@@ -8,7 +8,7 @@
       <path>Aircraft/eurofighter/Models/Instruments/mfd.ac</path>
       <offsets> 
         <x-m>3.49</x-m>
-        <y-m>-0.23</y-m>
+        <y-m>-0.21</y-m>
         <z-m>0.89</z-m>
 		<pitch-deg>-13</pitch-deg>
       </offsets>
@@ -17,7 +17,7 @@
       <path>Aircraft/eurofighter/Models/Instruments/mfd.ac</path>
       <offsets> 
         <x-m>3.49</x-m>
-        <y-m>0.23</y-m>
+        <y-m>0.21</y-m>
         <z-m>0.89</z-m>
 		<pitch-deg>-13</pitch-deg>
       </offsets>
@@ -292,7 +292,7 @@
       <object-name>elevator.L</object-name>
       <object-name>elevator.R</object-name>
       <property>surface-positions/elevator-pos-norm</property>
-      <factor>30</factor>
+      <factor>20</factor>
       <center> 
         <x-m>2.954</x-m>
         <y-m>0</y-m>
@@ -344,5 +344,27 @@
    <z>0</z>
       </axis>
     </animation>
+
+	<model>
+		<name>external loads</name>
+		<nopreview/>
+		<path>Aircraft/eurofighter/Models/loads.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+	<model>
+		<name>transparent</name>
+		<path>Aircraft/eurofighter/Models/transparent.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
 
   </PropertyList>

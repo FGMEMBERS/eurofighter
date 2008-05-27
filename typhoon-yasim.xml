@@ -152,20 +152,25 @@
   </gear>
 
 
-  <tank x="-8.1" y="0.5" z="-0.25" jet="true" capacity="1724"/>
-  <tank x="-8.1" y="0.5" z="-0.25" jet="true" capacity="1724"/>
+  <tank x="-7.3" y="0.0" z="-0.25" jet="true" capacity="1724"/>
+  <tank x="-9.5" y="-0.0" z="-0.25" jet="true" capacity="1724"/>
   <!-- left wing tank -->
-  <tank x="-10.2" y="2.7" z="0.26" jet="true" capacity="1724"/>
+  <tank x="-10.2" y="2.7" z="-0.18" jet="true" capacity="1724"/>
   <!-- right wing tank -->
-  <tank x="-10.2" y="-2.7" z="0.26" jet="true" capacity="1724"/>
+  <tank x="-10.2" y="-2.7" z="-0.18" jet="true" capacity="1724"/>
+	<!-- drop tanks -->
+  <tank x="-9.4" y="2.824" z="-0.6" jet="true" capacity="2645"/>
+  <tank x="-9.4" y="-2.824" z="-0.6" jet="true" capacity="2645"/>
+  <tank x="-9.4" y="0.0" z="-0.8" jet="true" capacity="2204"/>
 
+  <tank x="-9.4" y="0.0" z="-0.8" jet="true" capacity="0"/>
 
   <!-- ballast 
   <ballast x="-3.05" y="0" z="-0.1" mass="1000"/>
   
   <ballast x="-2.74" y="0" z="-0.35" mass="1200"/>
  -->
-  <ballast x="-2.7" y="0" z="-1.2" mass="3500"/>
+  <ballast x="-2.7" y="0" z="-1.2" mass="3350"/>
 
 
 <!--
@@ -178,5 +183,89 @@
         mass-prop="/yasim/hunter/weights/right-inboard-lbs"/>
 <weight x="-0.79" y="2" z="-1.33" size="1" 
         mass-prop="/yasim/hunter/weights/left-inboard-lbs"/>-->
+
+<!-- external loads -->
+  <weight x="-10.36" 
+					y="4.7"   
+					z="-0.65"
+		      size="0.25"
+     			mass-prop="sim/weight[0]/weight-lb"
+	/>
+  <weight x="-9.536" 
+					y="3.802"   
+					z="-0.775"
+		      size="0.45"
+     			mass-prop="sim/weight[1]/weight-lb"
+	/>
+<!-- left droptank -->
+  <weight x="-9.4" 
+					y="2.824"   
+					z="-0.6"
+		      size="0.7"
+     			mass-prop="sim/weight[2]/weight-lb"
+	/>
+  <weight x="7.376" 
+					y="1.739"   
+					z="-0.817"
+		      size="0.45"
+     			mass-prop="sim/weight[3]/weight-lb"
+	/>
+<!-- center -->
+  <weight x="-9.4" 
+					y="0.0"   
+					z="-0.32"
+		      size="0.6"
+     			mass-prop="sim/weight[4]/weight-lb"
+	/>
+  <weight x="7.376" 
+					y="-1.739"   
+					z="-0.817"
+		      size="0.45"
+     			mass-prop="sim/weight[5]/weight-lb"
+	/>
+<!-- right droptank -->
+  <weight x="-9.4" 
+					y="-2.824"   
+					z="-0.6"
+		      size="0.7"
+     			mass-prop="sim/weight[6]/weight-lb"
+	/>
+  <weight x="-9.536" 
+					y="-3.802"   
+					z="-0.775"
+		      size="0.45"
+     			mass-prop="sim/weight[7]/weight-lb"
+	/>
+  <weight x="-10.36" 
+					y="-4.7"   
+					z="-0.65"
+		      size="0.25"
+     			mass-prop="sim/weight[8]/weight-lb"
+	/>
+<!-- fuselage AMRAAMs -->
+  <weight x="-6.793" 
+					y="0.882"   
+					z="-0.616"
+		      size="0.3"
+     			mass-prop="sim/weight[9]/weight-lb"
+	/>
+  <weight x="-11.627" 
+					y="0.979"   
+					z="-0.616"
+		      size="0.3"
+     			mass-prop="sim/weight[10]/weight-lb"
+	/>
+  <weight x="-6.793" 
+					y="-0.882"   
+					z="-0.616"
+		      size="0.3"
+     			mass-prop="sim/weight[11]/weight-lb"
+	/>
+  <weight x="-11.627" 
+					y="-0.979"   
+					z="-0.616"
+		      size="0.3"
+     			mass-prop="sim/weight[12]/weight-lb"
+	/>
 
 </airplane>

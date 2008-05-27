@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<enable3d>true</enable3d>
+
+	<ladder>
+		<name>Pitch Ladder</name>
+		<type>pitch</type>
+		<x>-10</x>
+		<y>-25</y>
+		<width>40</width>
+		<height>40</height>
+		<roll-input>
+			<property>/orientation/roll-deg</property>
+		</roll-input>
+		<pitch-input>
+			<property>/orientation/pitch-deg</property>
+		</pitch-input>
+
+		<compression-factor>11.375</compression-factor>
+		<display-span>14.0</display-span>
+		<divisions>5.0</divisions>
+		<screen-hole>0</screen-hole>
+		<lbl-pos>0</lbl-pos>
+		<enable-fuselage-ref-line>true</enable-fuselage-ref-line>
+		<enable-target-spot>false</enable-target-spot>
+		<enable-velocity-vector>true</enable-velocity-vector>
+		<enable-drift-marker>false</enable-drift-marker>
+		<enable-alpha-bracket>false</enable-alpha-bracket>
+		<enable-energy-marker>false</enable-energy-marker>
+		<enable-climb-dive-marker>false</enable-climb-dive-marker>
+		<enable-glide-slope-marker>false</enable-glide-slope-marker>
+		<glide-slope>0.0</glide-slope>
+		<enable-energy-worm>false</enable-energy-worm>
+		<enable-waypoint-marker>true</enable-waypoint-marker>
+		<enable-zenith>true</enable-zenith>
+		<enable-hat>true</enable-hat>
+	</ladder>
+
+	<tape>
+		<name>Heading</name>
+		<x>-50</x>
+		<y>75</y>
+		<width>100</width>
+		<height>10</height>
+		<input>
+			<property>orientation/heading-magnetic-deg</property>
+			<factor>0.1</factor>
+			<max>85</max>
+			<min>0</min>
+		</input>
+		<major-divisions>1</major-divisions>
+		<minor-divisions>0.5</minor-divisions>
+		<display-span>3.5</display-span>
+		<option>center</option>
+		<option>horizontal</option>
+		<tick-bottom>false</tick-bottom>
+		<tick-top>false</tick-top>
+		<tick-right>false</tick-right>
+		<tick-left>false</tick-left>
+		<cap-bottom>false</cap-bottom>
+		<cap-top>false</cap-top>
+		<cap-right>false</cap-right>
+		<cap-left>false</cap-left>
+		<marker-offset>5</marker-offset>
+		<enable-pointer>true</enable-pointer>
+		<pointer-type>fixed</pointer-type>
+	</tape>
+
+
+<label>
+   <name>machno</name>
+   <x>-120</x>
+   <y>10</y> 
+   <width>25</width>
+   <height>15</height>
+      <input>
+          <property>/velocities/mach</property>
+
+          <damp>1.3</damp>
+      </input>
+   <format>%2.1f</format>
+      <box>true</box>
+   <prefix>M</prefix>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>2</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+</label>
+
+<label>
+   <name>kias</name>
+   <x>-90</x>
+   <y>10</y> 
+   <width>25</width>
+   <height>15</height>
+      <input>
+          <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+          <damp>1.3</damp>
+      </input>
+   <format>%4.0f</format>
+      <box>false</box>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>2</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+</label>
+
+<dial>
+   <name>altitude</name>
+   <x>90</x>
+   <y>20</y> 
+   <width>15</width>
+   <height>15</height>
+      <input>
+          <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+					<factor>1.0</factor>
+          <damp>0.3</damp>
+      </input>
+   <format>%3.3f</format>
+      <box>false</box>
+			<halign>center</halign>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  <tick-type>line</tick-type>
+  <tick-bottom>true</tick-bottom>
+  <tick-left>true</tick-left>
+  <cap-bottom>true</cap-bottom>
+  <display-span>10</display-span>
+  <radius>20</radius>
+  <divisions>10</divisions>
+</dial>
+ <label>
+  <name>Altitude</name>
+  <width>28</width>
+  <height>10</height>
+  <x>77</x>
+  <y>-20</y>
+  <halign>left</halign>
+  <format>%.0f0</format>
+  <box>true</box>
+  <option>center</option>
+  <pointer-width>10</pointer-width>
+  <pointer-length>5</pointer-length>
+  <input>
+   <property>/position/altitude-ft</property>
+   <factor>0.1</factor>
+  </input>
+ </label>
+</PropertyList>

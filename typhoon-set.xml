@@ -102,9 +102,288 @@ Model by MaverickAlex FDM by D. Faber
    </config>
  </autopilot>
 
-  <hud>
-   <enable3d>false</enable3d>
-  </hud>  
+    <hud>
+      <path n="1">Aircraft/eurofighter/Hud/Default.xml</path>
+      <visibility n="0" type="bool">false</visibility>
+      <visibility n="1" type="bool">true</visibility>
+      <current-color>0</current-color>
+      <color>
+	<transparent type="bool">true</transparent>
+	<antialiased type="bool">true</antialiased>
+	<brightness type="float">1.0</brightness>
+	<alpha type="float">0.70</alpha>
+      </color>
+      <palette>
+	<color n="0">
+	  <red type="float">0.50</red>
+	  <green type="float">1.0</green>
+	  <blue type="float">0.00</blue>
+	</color>
+	<color n="1">
+	  <red type="float">1.0</red>
+	  <green type="float">0.0</green>
+	  <blue type="float">0.0</blue>
+	</color>
+      </palette>
+    </hud>
+
+	<weight n="0">
+		<name>Pylon left 1</name>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>AIM-9 Sidewinder</name>
+			<lbs>190.0</lbs>
+		</opt>
+		</weight>
+	<weight n="1">
+		<name>Pylon left 2</name>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>AIM-9 Sidewinder</name>
+			<lbs>190.0</lbs>
+		</opt>
+		<opt>
+			<name>AMRAAM</name>
+			<lbs>330.0</lbs>
+		</opt>
+		<opt>
+			<name>ALARM</name>
+			<lbs>585.0</lbs>
+		</opt>
+		<opt>
+			<name>GBU-16</name>
+			<lbs>1094.0</lbs>
+		</opt>
+	</weight>
+	<weight n="2">
+		<name>Pylon left 3</name>
+		<tank>4</tank>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>1500 l Droptank</name>
+			<lbs>2645.0</lbs>
+			<gals>396</gals>
+		</opt>
+		<opt>
+			<name>AIM-9 Sidewinder</name>
+			<lbs>190.0</lbs>
+		</opt>
+		<opt>
+			<name>AMRAAM</name>
+			<lbs>330.0</lbs>
+		</opt>
+		<opt>
+			<name>ALARM</name>
+			<lbs>585.0</lbs>
+		</opt>
+		<opt>
+			<name>GBU-16</name>
+			<lbs>1094.0</lbs>
+		</opt>
+	</weight>
+	<weight n="3">
+		<name>Pylon left 4</name>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>AIM-9 Sidewinder</name>
+			<lbs>190.0</lbs>
+		</opt>
+		<opt>
+			<name>AMRAAM</name>
+			<lbs>330.0</lbs>
+		</opt>
+		<opt>
+			<name>ALARM</name>
+			<lbs>585.0</lbs>
+		</opt>
+		<opt>
+			<name>GBU-16</name>
+			<lbs>1094.0</lbs>
+		</opt>
+	</weight>
+
+	<weight n="4">
+		<name>Center</name>
+		<tank>6</tank>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>1000 l Droptank</name>
+			<lbs>2204.0</lbs>
+			<gals>211</gals>
+		</opt>
+  </weight>
+	<weight n="5">
+		<name>Pylon right 4</name>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>AIM-9 Sidewinder</name>
+			<lbs>190.0</lbs>
+		</opt>
+		<opt>
+			<name>AMRAAM</name>
+			<lbs>330.0</lbs>
+		</opt>
+		<opt>
+			<name>ALARM</name>
+			<lbs>585.0</lbs>
+		</opt>
+		<opt>
+			<name>GBU-16</name>
+			<lbs>1094.0</lbs>
+		</opt>
+	</weight>
+	<weight n="6">
+		<name>Pylon right 3</name>
+		<tank>5</tank>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>1500 l Droptank</name>
+			<lbs>2645.0</lbs>
+			<gals>396</gals>
+		</opt>
+		<opt>
+			<name>AIM-9 Sidewinder</name>
+			<lbs>190.0</lbs>
+		</opt>
+		<opt>
+			<name>AMRAAM</name>
+			<lbs>330.0</lbs>
+		</opt>
+		<opt>
+			<name>ALARM</name>
+			<lbs>585.0</lbs>
+		</opt>
+		<opt>
+			<name>GBU-16</name>
+			<lbs>1094.0</lbs>
+		</opt>
+	</weight>
+	<weight n="7">
+		<name>Pylon right 2</name>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>AIM-9 Sidewinder</name>
+			<lbs>190.0</lbs>
+		</opt>
+		<opt>
+			<name>AMRAAM</name>
+			<lbs>330.0</lbs>
+		</opt>
+		<opt>
+			<name>ALARM</name>
+			<lbs>585.0</lbs>
+		</opt>
+		<opt>
+			<name>GBU-16</name>
+			<lbs>1094.0</lbs>
+		</opt>
+	</weight>
+	<weight n="8">
+		<name>Pylon right 1</name>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>AIM-9 Sidewinder</name>
+			<lbs>190.0</lbs>
+		</opt>
+		</weight>
+	<weight n="9">
+		<name>Fuselage left 1</name>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>AMRAAM</name>
+			<lbs>330.0</lbs>
+		</opt>
+		</weight>
+	<weight n="10">
+		<name>Fuselage left 2</name>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>AMRAAM</name>
+			<lbs>330.0</lbs>
+		</opt>
+		</weight>
+	<weight n="11">
+		<name>Fuselage right 1</name>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>AMRAAM</name>
+			<lbs>330.0</lbs>
+		</opt>
+		</weight>
+	<weight n="12">
+		<name>Fuselage right 2</name>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>none</name>
+			<lbs>0</lbs>
+		</opt>
+		<opt>
+			<name>AMRAAM</name>
+			<lbs>330.0</lbs>
+		</opt>
+		</weight>
+
  </sim>
 
  <engines>
@@ -123,6 +402,47 @@ Model by MaverickAlex FDM by D. Faber
 
  <!-- set up control properties for YASim -->
  <controls>
+		<armament>
+			<station n="0">
+				<release type="bool">false</release>
+			</station>
+			<station n="1">
+				<release type="bool">false</release>
+			</station>
+			<station n="2">
+				<release type="bool">false</release>
+			</station>
+			<station n="3">
+				<release type="bool">false</release>
+			</station>
+			<station n="4">
+				<release type="bool">false</release>
+			</station>
+			<station n="5">
+				<release type="bool">false</release>
+			</station>
+			<station n="6">
+				<release type="bool">false</release>
+			</station>
+			<station n="7">
+				<release type="bool">false</release>
+			</station>
+			<station n="8">
+				<release type="bool">false</release>
+			</station>
+			<station n="9">
+				<release type="bool">false</release>
+			</station>
+			<station n="10">
+				<release type="bool">false</release>
+			</station>
+			<station n="11">
+				<release type="bool">false</release>
+			</station>
+			<station n="12">
+				<release type="bool">false</release>
+			</station>
+		</armament>
 
    <canopy>
       <canopy-pos-norm type="float">1.0</canopy-pos-norm>
