@@ -44,3 +44,5 @@ toggle_canopy = func {
       canopy.open();
   }
 }
+
+aircraft.livery.init("Aircraft/eurofighter/Models/Liveries", "sim/model/livery/name", "sim/model/livery/index");

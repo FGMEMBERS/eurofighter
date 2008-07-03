@@ -3,9 +3,28 @@
   <PropertyList> 
     <path>typhoon.ac</path>
 
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/eurofighter/Models/Liveries", 10);
+
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
 <!-- Cockpit -->
+	<model>
+		<name>Cockpit</name>
+		<path>Aircraft/eurofighter/Models/Instruments/cockpit.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
 	<model> 
-      <path>Aircraft/eurofighter/Models/Instruments/mfd.ac</path>
+      <path>Aircraft/eurofighter/Models/Instruments/mfd2.xml</path>
       <offsets> 
         <x-m>3.49</x-m>
         <y-m>-0.21</y-m>
@@ -14,7 +33,7 @@
       </offsets>
     </model>
 	<model> 
-      <path>Aircraft/eurofighter/Models/Instruments/mfd.ac</path>
+      <path>Aircraft/eurofighter/Models/Instruments/mfd3.xml</path>
       <offsets> 
         <x-m>3.49</x-m>
         <y-m>0.21</y-m>
@@ -23,7 +42,7 @@
       </offsets>
     </model>
 	<model> 
-      <path>Aircraft/eurofighter/Models/Instruments/mfd.ac</path>
+      <path>Aircraft/eurofighter/Models/Instruments/mfd1.xml</path>
       <offsets> 
         <x-m>3.495</x-m>
         <y-m>-0.0</y-m>
@@ -366,5 +385,14 @@
 			<pitch-deg>0.0</pitch-deg>
 		</offsets>
 	</model>	
+
+
+  <animation>
+    <type>material</type>
+    <object-name>fsellogo</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>raf.png</texture>
+  </animation>
 
   </PropertyList>

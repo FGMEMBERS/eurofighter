@@ -212,6 +212,34 @@
       </and>
     </condition>
   </animation>
+
+	<model>
+		<name>left small Tank</name>
+		<path>Aircraft/eurofighter/Models/tank1000.ac</path>
+		<offsets>
+			<x-m>8.727</x-m>
+			<y-m>-2.824</y-m>
+			<z-m>-0.8</z-m>
+			<pitch-deg>-1.74</pitch-deg>
+		</offsets>
+	</model>	
+  <animation>
+    <type>select</type>
+    <object-name>left small Tank</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[2]/selected</property>
+          <value>1000 l Droptank</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[2]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
 	<model>
 		<name>left AIM 9 pos 3</name>
 		<path>Aircraft/eurofighter/Models/AIM9.ac</path>
@@ -449,7 +477,7 @@
 		<name>center tank</name>
 		<path>Aircraft/eurofighter/Models/tank1000.ac</path>
 		<offsets>
-			<x-m>9.049</x-m>
+			<x-m>9.449</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-1.014</z-m>
 			<pitch-deg>-0.865</pitch-deg>
@@ -664,6 +692,35 @@
       </and>
     </condition>
   </animation>
+
+	<model>
+		<name>right small Tank</name>
+		<path>Aircraft/eurofighter/Models/tank1000.ac</path>
+		<offsets>
+			<x-m>8.727</x-m>
+			<y-m>2.824</y-m>
+			<z-m>-0.8</z-m>
+			<pitch-deg>-1.74</pitch-deg>
+		</offsets>
+	</model>	
+  <animation>
+    <type>select</type>
+    <object-name>right small Tank</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[6]/selected</property>
+          <value>1000 l Droptank</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[6]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+
 	<model>
 		<name>right AIM 9 pos 3</name>
 		<path>Aircraft/eurofighter/Models/AIM9.ac</path>

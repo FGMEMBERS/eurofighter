@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+
+  <PropertyList> 
+    <path>cockpit.ac</path>
+<!-- MID -->
+
+<!-- Universal adi-->
+<animation>
+    <type>texmultiple</type>
+    <object-name>asi.1</object-name>
+    <transform>
+        <property>orientation/pitch-deg</property>
+        <subtype>textranslate</subtype>
+        <factor>0.00452</factor>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </transform>
+    <transform>
+        <property>orientation/roll-deg</property>
+        <subtype>texrotate</subtype>
+        <center>
+            <x>0.25</x>
+            <y>0.50</y>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
+    </transform>
+</animation>
+<animation>
+    <type>texrotate</type>
+    <object-name>asi.2</object-name>
+    <property>orientation/heading-magnetic-deg</property>
+    <center>
+        <x>0.75</x>
+        <y>0.25</y>
+        <z>0.0</z>
+    </center>
+    <axis>
+        <x>0</x>
+        <y>0</y>
+        <z>-1</z>
+    </axis>
+</animation>
+<!-- Waypoint -->
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>wpt1</object-name>
+	 <property>autopilot/route-manager/wp[0]/id</property>
+	 <factor>0.01</factor>
+	 <step>10.0</step>
+	 <axis>
+		 <x>0</x>
+		 <y>-1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+<!-- asi -->
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>stbasi1</object-name>
+	 <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+	 <factor>0.001</factor>
+	 <step>100.0</step>
+	 <axis>
+		 <x>0</x>
+		 <y>-1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>stbasi2</object-name>
+	 <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+	 <factor>0.01</factor>
+	 <step>10.0</step>
+	 <axis>
+		 <x>0</x>
+		 <y>-1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>stbasi3</object-name>
+	 <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+	 <factor>0.1</factor>
+	 <step>1.0</step>
+	 <axis>
+		 <x>0</x>
+		 <y>-1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+	<model>
+		<name>mid-tL</name>
+		<path>Aircraft/eurofighter/Models/Instruments/mid-tL.xml</path>
+		<offsets>
+			<x-m>3.598</x-m>
+			<y-m>-0.034</y-m>
+			<z-m>1.034</z-m>
+			<pitch-deg>24.0</pitch-deg>
+		</offsets>
+	</model>	
+	<model>
+		<name>mid-tR</name>
+		<path>Aircraft/eurofighter/Models/Instruments/mid-tR.xml</path>
+		<offsets>
+			<x-m>3.598</x-m>
+			<y-m>0.034</y-m>
+			<z-m>1.034</z-m>
+			<pitch-deg>24.0</pitch-deg>
+		</offsets>
+	</model>	
+
+  </PropertyList>
