@@ -9,7 +9,7 @@ setlistener("/controls/engines/engine[1]/throttle", func(n) {
 
 
 # turn off hud in external views
-setlistener("/sim/current-view/view-number", func { setprop("/sim/hud/visibility[1]", cmdarg().getValue() == 0) },1);
+setlistener("/sim/current-view/view-number", func(n) { setprop("/sim/hud/visibility[1]", n.getValue() == 0) },1);
 
 var canopy = aircraft.door.new ("/controls/canopy/", 3);
 
