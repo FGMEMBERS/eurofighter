@@ -4,7 +4,7 @@
     <path>mfd.ac</path>
 
  <panel>
-  <path>Aircraft/eurofighter/Models/Instruments/mfd-hotspots.xml</path>
+  <path>Aircraft/eurofighter/Models/Instruments/mfd1-hotspots.xml</path>
   <bottom-left>
    <x-m>0.02</x-m>
    <y-m>-0.1</y-m>

@@ -22,16 +22,24 @@
   </top-left>
  </panel>
 
-	<model>
-		<name>Engine Status</name>
-    <path>Aircraft/eurofighter/Models/Instruments/eng-status.xml</path>
-    <offsets> 
-      <x-m>0.002</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-
-    </offsets>
+    <model>
+	<name>Engine Status</name>
+	    <path>Aircraft/eurofighter/Models/Instruments/eng-status.xml</path>
+	    <offsets> 
+	      <x-m>0.002</x-m>
+	      <y-m>0.0</y-m>
+	      <z-m>0.0</z-m>
+	</offsets>
 	</model>
 
+ <model>
+  <name>tid</name>
+  <path>Aircraft/eurofighter/Models/Instruments/hsd-radar.xml</path>
+  <offsets>
+   <x-m>0.002</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </offsets>
+ </model>
 
-  </PropertyList>
+</PropertyList>

@@ -5,7 +5,8 @@
 <PropertyList>
 
 	<name>MFD Hotspots</name>
-	<background>Aircraft/bf109/Models/transparent-bg.rgb</background>
+	<background>Aircraft/Generic/Panels/Textures/transparent-bg.rgb</background>
+	<!-- Aircraft/bf109/Models/transparent-bg.rgb -->
 	<w>512</w>
 	<h>512</h>
 	<y-offset>0</y-offset>
@@ -21,8 +22,8 @@
 			<h-base>512</h-base>
 
 <!-- define hotspot actions below -->
-<!-- left Buttons -->
 		<actions>
+<!-- left Buttons -->
 			<action>
 				<name>L1</name>
 				<button>0</button>
@@ -31,12 +32,8 @@
 				<w>50</w>
 				<h>45</h>
 				<binding>
-					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
-					<step>-1</step>
-					<min>0</min>
-					<max>360</max>
-					<wrap>true</wrap>
+					<command>property-toggle</command>
+					<property>controls/HSD/on-off</property>
 				</binding>
 			</action>	
 
@@ -48,12 +45,8 @@
 				<w>50</w>
 				<h>45</h>
 				<binding>
-					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
-					<step>-1</step>
-					<min>0</min>
-					<max>360</max>
-					<wrap>true</wrap>
+					<command>property-toggle</command>
+					<property>instrumentation/radar/radar-standby</property>
 				</binding>
 			</action>	
 			<action>
@@ -65,13 +58,15 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
-					<step>-1</step>
-					<min>0</min>
-					<max>360</max>
+					<property>controls/pilots-displays/hsd-mode-nav</property>
+					<step>1</step>
+					<min>-1</min>
+					<max>2</max>
 					<wrap>true</wrap>
 				</binding>
 			</action>
+<!--
+ -->
 			<action>
 				<name>L4</name>
 				<button>0</button>
@@ -80,12 +75,8 @@
 				<w>50</w>
 				<h>45</h>
 				<binding>
-					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
-					<step>-1</step>
-					<min>0</min>
-					<max>360</max>
-					<wrap>true</wrap>
+					<command>property-toggle</command>
+					<property>instrumentation/radar-awg-9/wcs-mode/pulse-srch</property>
 				</binding>
 			</action>	
 			<action>
@@ -96,12 +87,8 @@
 				<w>50</w>
 				<h>45</h>
 				<binding>
-					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
-					<step>-1</step>
-					<min>0</min>
-					<max>360</max>
-					<wrap>true</wrap>
+					<command>property-toggle</command>
+					<property>instrumentation/radar-awg-9/wcs-mode/tws-auto</property>
 				</binding>
 			</action>	
 			<action>
@@ -113,16 +100,14 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
-					<step>-1</step>
+					<property>instrumentation/radar/az-field</property>
+					<step>10</step>
 					<min>0</min>
-					<max>360</max>
+					<max>160</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>	
+			</action>
 
-
-<!-- right Buttons -->
 			<action>
 				<name>R1</name>
 				<button>0</button>
@@ -132,14 +117,15 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
-					<step>-1</step>
+					<property>instrumentation/radar/radar2-range</property>
+					<step>1</step>
 					<min>0</min>
-					<max>360</max>
+					<max>250</max>
 					<wrap>true</wrap>
 				</binding>
 			</action>	
 
+<!-- right Buttons
 			<action>
 				<name>R2</name>
 				<button>0</button>
@@ -149,7 +135,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -165,7 +151,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -181,7 +167,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -197,7 +183,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -213,13 +199,14 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>	
+			</action> -->
+
 
 
 
@@ -239,8 +226,8 @@
 					<max>40</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>	
-			<action>
+			</action>
+<!--			<action>
 				<name>C2</name>
 				<button>0</button>
 				<x>-87</x>
@@ -255,8 +242,9 @@
 					<max>360</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>	
-		<action>
+			</action> -->
+	
+			<action>
 				<name>C3</name>
 				<button>0</button>
 				<x>-24</x>
@@ -271,7 +259,7 @@
 					<max>4</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>
+			</action><!--
 			<action>
 				<name>C4</name>
 				<button>0</button>
@@ -281,13 +269,14 @@
 				<h>49</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>	
+			</action> -->
+
 			<action>
 				<name>C5</name>
 				<button>0</button>
@@ -303,7 +292,9 @@
 					<max>50</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>	
+			</action>
+
+	
 	 	</actions>
 
 		</instrument>

@@ -1035,4 +1035,17 @@
   </axis>
  </animation>
 
+	<!-- lighting -->
+	<animation>
+		<object-name>Enav</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>controls/VDI/brightness</factor-prop>
+			<red>0.0</red>
+			<green>0.9</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+
+
 </PropertyList>

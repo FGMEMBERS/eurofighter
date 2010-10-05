@@ -5,7 +5,8 @@
 <PropertyList>
 
 	<name>MFD Hotspots</name>
-	<background>Aircraft/bf109/Models/transparent-bg.rgb</background>
+	<background>Aircraft/Generic/Panels/Textures/transparent-bg.rgb</background>
+	<!-- Aircraft/bf109/Models/transparent-bg.rgb -->
 	<w>512</w>
 	<h>512</h>
 	<y-offset>0</y-offset>
@@ -21,8 +22,8 @@
 			<h-base>512</h-base>
 
 <!-- define hotspot actions below -->
-<!-- left Buttons -->
 		<actions>
+<!-- left Buttons 
 			<action>
 				<name>L1</name>
 				<button>0</button>
@@ -32,7 +33,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -49,7 +50,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -65,7 +66,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -81,7 +82,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -97,7 +98,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -113,16 +114,15 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>	
+			</action>	 -->
 
-
-<!-- right Buttons -->
+<!-- right Buttons
 			<action>
 				<name>R1</name>
 				<button>0</button>
@@ -132,7 +132,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -149,7 +149,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -165,7 +165,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -181,7 +181,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -197,7 +197,7 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -213,17 +213,17 @@
 				<h>45</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>	
+			</action>	-->
 
 
 
-<!-- Center Buttons -->
+<!-- Center Buttons 
 			<action>
 				<name>C1</name>
 				<button>0</button>
@@ -233,7 +233,7 @@
 				<h>49</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -249,13 +249,13 @@
 				<h>49</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>	
+			</action> -->
 			<action>
 				<name>C3</name>
 				<button>0</button>
@@ -271,7 +271,8 @@
 					<max>4</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>
+			</action> 
+			<!--
 			<action>
 				<name>C4</name>
 				<button>0</button>
@@ -281,7 +282,7 @@
 				<h>49</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
@@ -297,13 +298,13 @@
 				<h>49</h>
 				<binding>
 					<command>property-adjust</command>
-					<property>/instrumentation/heading-indicator/offset-deg</property>
+					<property>instrumentation/heading-indicator/offset-deg</property>
 					<step>-1</step>
 					<min>0</min>
 					<max>360</max>
 					<wrap>true</wrap>
 				</binding>
-			</action>	
+			</action> -->	
 
 	 	</actions>
 

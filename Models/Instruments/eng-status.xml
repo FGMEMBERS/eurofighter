@@ -4,11 +4,23 @@
  <path>eng-status.ac</path>
  
 
+ <animation>
+	 <type>select</type>
+	 <object-name>EngEstatus</object-name>
+	 <condition>   
+		 <equals>
+			 <property>controls/HSD/on-off</property>
+			 <value>0</value>
+		 </equals>
+	 </condition>
+ </animation>
+
+
 	<animation>
 		<type>rotate</type>
 		<object-name>rpm.L</object-name>
 		<property>engines/engine[0]/n1</property>
-		<factor>2.4</factor>
+		<factor>2</factor>
 		<center>
 			<x-m>0.0</x-m>
 			<y-m>-0.044</y-m>
@@ -24,7 +36,7 @@
 		<type>rotate</type>
 		<object-name>rpm.R</object-name>
 		<property>engines/engine[1]/n1</property>
-		<factor>2.4</factor>
+		<factor>2</factor>
 		<center>
 			<x-m>0.0</x-m>
 			<y-m>0.046</y-m>
