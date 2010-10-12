@@ -17,10 +17,14 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
   <aircraft-version>1.4</aircraft-version>
   
   <flight-model>yasim</flight-model>
-  <!-- Latest version with G-limitatios:
+  <!-- Stable version with G-limitatios:
 	  <aero>typhoon-yasim</aero> -->
-  <!-- Latest version without G-limitaitons: -->
+  <!-- Stable version without G-limitatios: -->
 	  <aero>typhoon-yasim-nog</aero>
+  <!-- Testing version with G-limitatios:
+	  <aero>typhoon-yasim-test</aero> -->
+  <!-- Testing version without G-limitaitons:
+	  <aero>typhoon-yasim-test-nog</aero> -->
   <fuel-fraction>0.4</fuel-fraction>
 
   <startup>
@@ -37,11 +41,11 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
       </autopilot> 
      <!-- Autopilot for stable FGFS 2.0 
      <autopilot>
-         <path>Aircraft/eurofighter/Systems/typhoon-autopilot200.xml</path>
+         <path>Aircraft/eurofighter/Systems/typhoon-autopilot200v2.xml</path>
       </autopilot> -->
      <!-- Autopilot for use on development FGFS 2.Git
      <autopilot>
-         <path>Aircraft/eurofighter/Systems/typhoon-autopilot201.xml</path>
+         <path>Aircraft/eurofighter/Systems/typhoon-autopilotv2.xml</path>
       </autopilot>  --> 
   </systems> 
  
@@ -756,7 +760,9 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 						<roll type="bool">true</roll>
 						<yaw type="bool">true</yaw>
 					</SAS-->
-
+  <switches>
+   <voice type="bool">true</voice>
+  </switches>
  </controls>
 
  <yasim>

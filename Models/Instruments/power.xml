@@ -104,6 +104,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Parking</object-name>
+		<!--property>controls/gear/brake-left</property-->
 		<property>controls/gear/brake-parking</property>
 		<factor>0.1105</factor><!-- 0.2210 / 2 -->
 		<axis>

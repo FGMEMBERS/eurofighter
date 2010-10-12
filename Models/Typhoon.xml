@@ -176,11 +176,12 @@
   </condition>
  </animation>
 
-<!-- nose gear.	FIXME: group every gear on blender -->
+<!-- nose gear.	Done: group every gear on blender -->
 	
     <animation> 
       <type>rotate</type>
-	  <object-name>nosegear.1</object-name>
+	  <object-name>Gear.nose</object-name>
+	  <!--object-name>nosegear.1</object-name>
 	  <object-name>nosegear.2</object-name>
 	  <object-name>nosegear3</object-name>
 	  <object-name>nosegear4</object-name>
@@ -188,7 +189,7 @@
 	  <object-name>nosewheel.1</object-name>
 	  <object-name>nosewheel.2</object-name>
 	  <object-name>nosewheel.3</object-name>
-	  <object-name>nosewheel.4</object-name>
+	  <object-name>nosewheel.4</object-name-->
       <property>surface-positions/rudder-pos-norm</property>
       <factor>20</factor>
 	  <center>
@@ -234,7 +235,8 @@
  </animation>
     <animation>
   <type>rotate</type>
-  <object-name>nosegear.1</object-name>
+  <object-name>Gear.nose</object-name>
+  <!--object-name>nosegear.1</object-name>
   <object-name>nosegear.2</object-name>
   <object-name>nosegear3</object-name>
   <object-name>nosegear4</object-name>
@@ -242,7 +244,7 @@
   <object-name>nosewheel.1</object-name>
   <object-name>nosewheel.2</object-name>
   <object-name>nosewheel.3</object-name>
-  <object-name>nosewheel.4</object-name>
+  <object-name>nosewheel.4</object-name-->
   <property>gear/gear[0]/position-norm</property>
       <interpolation> 
         <entry>
@@ -337,12 +339,13 @@
  </animation>
     <animation>
   <type>rotate</type>
-  <object-name>gear1.L</object-name>
+  <object-name>Gear.L</object-name>
+  <!--object-name>gear1.L</object-name>
   <object-name>gear2.L</object-name>
   <object-name>gear3.L</object-name>
   <object-name>gear4.L</object-name>
   <object-name>wheel1.L</object-name>
-  <object-name>wheel2.L</object-name>
+  <object-name>wheel2.L</object-name-->
   <property>gear/gear[1]/position-norm</property>
       <interpolation> 
         <entry>
@@ -433,12 +436,13 @@
  </animation>
     <animation>
   <type>rotate</type>
-  <object-name>gear1.R</object-name>
+  <object-name>Gear.R</object-name>
+  <!--object-name>gear1.R</object-name>
   <object-name>gear2.R</object-name>
   <object-name>gear3.R</object-name>
   <object-name>gear4.R</object-name>
   <object-name>wheel1.R</object-name>
-  <object-name>wheel2.R</object-name>
+  <object-name>wheel2.R</object-name-->
   <property>gear/gear[2]/position-norm</property>
       <interpolation> 
         <entry>

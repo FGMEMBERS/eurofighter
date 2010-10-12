@@ -17,10 +17,14 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
   <aircraft-version>1.4</aircraft-version>
   
   <flight-model>yasim</flight-model>
-  <!-- Latest version with G-limitatios:
+  <!-- Stable version with G-limitatios:
 	  <aero>typhoon-yasim</aero> -->
-  <!-- Latest version without G-limitaitons: -->
-	  <aero>typhoon-yasim-nog</aero>
+  <!-- Stable version without G-limitatios: -->
+	  <aero>typhoon-yasim</aero>
+  <!-- Testing version with G-limitatios:
+	  <aero>typhoon-yasim-test</aero> -->
+  <!-- Testing version without G-limitaitons:
+	  <aero>typhoon-yasim-test-nog</aero> -->
   <fuel-fraction>0.4</fuel-fraction>
 
   <startup>
@@ -33,11 +37,11 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
       </electrical>
      <!-- Autopilot for use on development FGFS 2.Git--> 
      <autopilot>
-         <path>Aircraft/eurofighter/Systems/typhoon-autopilot201.xml</path>
+         <path>Aircraft/eurofighter/Systems/typhoon-autopilotv2.xml</path>
       </autopilot>
      <!-- Autopilot for stable FGFS 2.0
      <autopilot>
-         <path>Aircraft/eurofighter/Systems/typhoon-autopilot200.xml</path>
+         <path>Aircraft/eurofighter/Systems/typhoon-autopilot200v2.xml</path>
       </autopilot> --> 
      <!-- Autopilot for older FGFS 1.9.1
      <autopilot>
@@ -791,6 +795,12 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 						<yaw type="bool">true</yaw>
 					</SAS-->
 
+  <buttons>
+   <FCS-override type="bool">true</FCS-override>
+  </buttons>
+  <switches>
+   <voice type="bool">true</voice>
+  </switches>
  </controls>
 
  <yasim>
@@ -910,6 +920,9 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
       <file>Aircraft/eurofighter/Nasal/typhoon.nas</file>
       <!--file>Aircraft/eurofighter/Nasal/SAS.nas</file-->
     </typhoon>
+	<fcs>
+	 <file>Aircraft/eurofighter/Nasal/fcs.nas</file>
+	</fcs>
     <enav>
       <file>Aircraft/eurofighter/Nasal/enav.nas</file>
     </enav>
@@ -919,6 +932,9 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
     <autopilot>
 	<file>Aircraft/eurofighter/Nasal/autopilot.nas</file>
     </autopilot>
+	<gearbox>
+	 <file>Aircraft/eurofighter/Nasal/gearbox.nas</file>
+	</gearbox>
 
        <!--en pruebas	-->
        <!--en pruebas
@@ -928,6 +944,7 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 	<rwr>
 		<file>Aircraft/eurofighter/Nasal/rwr.nas</file>
 	</rwr>
+
 	<radardist>
 		<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
 	</radardist>

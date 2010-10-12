@@ -244,8 +244,7 @@
    <volume>
     	<property>engines/engine/thrust-lbs</property>
     	<factor>0.00005</factor>
-    	<offset>0.4</offset>
-	<min>0.0</min>
+    	<offset>-0.4</offset>
 	<max>1.0</max>
    </volume>
   </thrust>
@@ -285,14 +284,14 @@
 	<max>1.0</max>
 	</volume>
    <pitch>
-        <property>engines/engine/n2</property>
+    <property>engines/engine/n2</property>
 	<factor>0.005</factor>
-	<min>0</min>
+	<min>0.0</min>
 	<max>0.7</max>
    </pitch>
   </engine>
   
-  <engine>
+  <!-- engine>
    <name>Reheat internal</name>
    <mode>looped</mode>
    <path>Aircraft/eurofighter/Sounds/Samples/reheat.wav</path>
@@ -315,7 +314,7 @@
          <min>0.3</min>
 	<max>1.0</max>
    </volume>
-   </engine>
+   </engine -->
 
 <!-- old sounds setup from A-4 & AlMurSi tunning -->
 
@@ -334,6 +333,7 @@
 				<property>/velocities/airspeed-kt</property>
 				<type>lin</type>
 				<factor>.012</factor>
+				<offset>-0.5</offset>
 				<min>0</min>
 				<max>1</max>
 			</volume>
@@ -495,6 +495,7 @@
 				<max>0.9</max>
 			</volume>
 		</slat>
+		<!-- Wind >
 		<wind>
 			<name>wind</name>
 			<mode>looped</mode>
@@ -519,6 +520,7 @@
 				<offset>1.25</offset>
 			</pitch>
 		</wind>
+		<-->
 <!-- no binding yet? 
   <stall>
    <name>stall</name>
@@ -685,6 +687,32 @@
 				<max>1.0</max>
 			</volume>
 		</click>
+		<click>
+			<name>Reverser down</name>
+			<path>Aircraft/eurofighter/Sounds/Samples/click.wav</path>
+			<condition>
+				<property>/controls/engines/engine[0]/reverser</property>
+				<!--property>/controls/engines/engine[1]/reverser</property-->
+			</condition>
+			<volume>
+				<factor>1.0</factor>
+				<max>1.0</max>
+			</volume>
+		</click>
+		<click>
+			<name>Reverser brakes up</name>
+			<path>Aircraft/eurofighter/Sounds/Samples/click.wav</path>
+			<condition>
+				<not>
+				   <property>/controls/engines/engine[0]/reverser</property>
+				   <!--property>/controls/engines/engine[1]/reverser</property-->
+				</not>
+			</condition>
+			<volume>
+				<factor>1.0</factor>
+				<max>1.0</max>
+			</volume>
+		</click>
 
 
 		<!--guns>
@@ -737,6 +765,332 @@
   </pitch>
 </crash>
 
+<!-- Voice -->
+
+ <voice>
+  <name>gear-up-vox</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/gearup.wav</path>
+  <condition>
+   <equals>
+    <property>/gear/gear[0]/position-norm</property>
+    <value>0</value>
+   </equals>
+   <equals>
+    <property>/gear/gear[1]/position-norm</property>
+    <value>0</value>
+   </equals> 
+   <equals>
+    <property>/gear/gear[2]/position-norm</property>
+    <value>0</value>
+   </equals>  
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   </condition>
+ </voice>
+ 
+ <voice>
+  <name>gear-down-vox</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/geardown.wav</path>
+  <condition>
+   <equals>
+    <property>/gear/gear[0]/position-norm</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/gear/gear[1]/position-norm</property>
+    <value>1</value>
+   </equals> 
+   <equals>
+    <property>/gear/gear[2]/position-norm</property>
+    <value>1</value>
+   </equals>  
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>speed-low-vox</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/speedlow.wav</path>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/velocities/airspeed-kt</property>
+    <value>200</value>
+   </less-than>
+   <not>
+    <property>/gear/gear[0]/position-norm</property>
+   </not>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>fuel-low1-vox</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/fuellow.wav</path>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/consumables/fuel/total-fuel-lbs</property>
+    <value>1500</value>
+   </less-than>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>fuel-low2-vox</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/fuellow.wav</path>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/consumables/fuel/total-fuel-lbs</property>
+    <value>1000</value>
+   </less-than>   
+  </condition>
+ </voice>
+
+<voice>
+  <name>fuel-low3-vox</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/fuellow.wav</path>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/consumables/fuel/total-fuel-lbs</property>
+    <value>500</value>
+   </less-than>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>gear-not-down-vox</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/gearnotdown.wav</path>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/velocities/airspeed-kt</property>
+    <value>180</value>
+   </less-than>
+   <less-than>
+    <property>/position/altitude-agl-ft</property>
+    <value>500</value>
+   </less-than>
+   <not>
+    <property>/gear/gear[0]/position-norm</property>
+	<property>/gear/gear[1]/position-norm</property>
+	<property>/gear/gear[2]/position-norm</property>
+   </not>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>check-radar-1</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkradar.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <equals>
+    <property>/ai/models/multiplayer/radar/in-range</property>
+    <value>true</value>
+   </equals>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>check-radar-2</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkradar.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <equals>
+    <property>/ai/models/multiplayer[1]/radar/in-range</property>
+    <value>true</value>
+   </equals>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>check-radar-3</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkradar.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <equals>
+    <property>/ai/models/multiplayer[2]/radar/in-range</property>
+    <value>true</value>
+   </equals>   
+  </condition>
+ </voice>
+ 
+  <voice>
+  <name>check-radar-4</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkradar.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <equals>
+    <property>/ai/models/multiplayer[3]/radar/in-range</property>
+    <value>true</value>
+   </equals>   
+  </condition>
+ </voice>
+ 
+  <voice>
+  <name>check-radar-5</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkradar.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <equals>
+    <property>/ai/models/multiplayer[4]/radar/in-range</property>
+    <value>true</value>
+   </equals>   
+  </condition>
+ </voice>
+ 
+  <voice>
+  <name>check-radar-6</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkradar.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <equals>
+    <property>/ai/models/multiplayer[5]/radar/in-range</property>
+    <value>true</value>
+   </equals>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>check-proximity-1</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkprox.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/ai/models/multiplayer[0]/radar/in-range</property>
+    <value>5</value>
+   </less-than>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>check-proximity-2</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkprox.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/ai/models/multiplayer[1]/radar/in-range</property>
+    <value>5</value>
+   </less-than>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>check-proximity-3</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkprox.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/ai/models/multiplayer[2]/radar/in-range</property>
+    <value>5</value>
+   </less-than>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>check-proximity-4</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkprox.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/ai/models/multiplayer[3]/radar/in-range</property>
+    <value>5</value>
+   </less-than>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>check-proximity-5</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkprox.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/ai/models/multiplayer[4]/radar/in-range</property>
+    <value>5</value>
+   </less-than>   
+  </condition>
+ </voice>
+ 
+ <voice>
+  <name>check-proximity-6</name>
+  <path>Aircraft/eurofighter/Sounds/Voice/checkprox.wav</path>
+  <mode>once</mode>
+  <condition>
+   <equals>
+    <property>/controls/switches/voice</property>
+	<value>true</value>
+   </equals>
+   <less-than>
+    <property>/ai/models/multiplayer[5]/radar/in-range</property>
+    <value>5</value>
+   </less-than>   
+  </condition>
+ </voice>
   
  </fx>
 </PropertyList>
