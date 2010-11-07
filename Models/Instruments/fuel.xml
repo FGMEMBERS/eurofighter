@@ -1,133 +1,95 @@
 <?xml version="1.0"?>
 <PropertyList>
 
- <path>eng-status.ac</path>
- 
-
- <animation>
-	 <type>select</type>
-	 <object-name>EngEstatus</object-name>
-	 <condition>   
-		 <equals>
-			 <property>controls/HSD/on-off</property>
-			 <value>0</value>
-		 </equals>
-	 </condition>
- </animation>
-
-
-	<animation>
-		<type>rotate</type>
-		<object-name>rpm.L</object-name>
-		<property>engines/engine[0]/n1</property>
-		<factor>2</factor>
-		<center>
-			<x-m>0.0</x-m>
-			<y-m>-0.044</y-m>
-			<z-m>0.051</z-m>
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>rpm.R</object-name>
-		<property>engines/engine[1]/n1</property>
-		<factor>2</factor>
-		<center>
-			<x-m>0.0</x-m>
-			<y-m>0.046</y-m>
-			<z-m>0.051</z-m>
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.L1</object-name>
-	 <property>engines/engine[0]/n1</property>
-	 <factor>0.001</factor>
-	 <step>100.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.L2</object-name>
-	 <property>engines/engine[0]/n1</property>
-	 <factor>0.01</factor>
-	 <step>10.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
+ <path>fuel.ac</path>
  
  <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.L3</object-name>
-	 <property>engines/engine[0]/n1</property>
-	 <factor>0.1</factor>
-	 <step>1.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
+  <type>textranslate</type>
+  <object-name>fwdmain</object-name>
+  <property>consumables/fuel/tank/level-gal_us</property>
+  <factor>0.00085</factor>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
  </animation>
-
  <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.R1</object-name>
-	 <property>engines/engine[1]/n1</property>
-	 <factor>0.001</factor>
-	 <step>100.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
+  <type>textranslate</type>
+  <object-name>rearmain</object-name>
+  <property>consumables/fuel/tank[1]/level-gal_us</property>
+  <factor>0.001775</factor>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
  </animation>
-
  <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.R2</object-name>
-	 <property>engines/engine[1]/n1</property>
-	 <factor>0.01</factor>
-	 <step>10.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
+  <type>textranslate</type>
+  <object-name>fwdwing.L</object-name>
+  <property>consumables/fuel/tank[2]/level-gal_us</property>
+  <factor>0.0078</factor>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
  </animation>
- 
  <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.R3</object-name>
-	 <property>engines/engine[1]/n1</property>
-	 <factor>0.1</factor>
-	 <step>1.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
+  <type>textranslate</type>
+  <object-name>rearwing.L</object-name>
+  <property>consumables/fuel/tank[3]/level-gal_us</property>
+  <factor>0.0038</factor>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>fwdwing.R</object-name>
+  <property>consumables/fuel/tank[4]/level-gal_us</property>
+  <factor>0.0078</factor>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>rearwing.R</object-name>
+  <property>consumables/fuel/tank[5]/level-gal_us</property>
+  <factor>0.0038</factor>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
  </animation>
 
-
+<animation>
+  <type>material</type>
+  <object-name>aux</object-name>
+  <object-name>fwdmain</object-name>
+  <object-name>rearmain</object-name>
+  <object-name>fwdwing.L</object-name>
+  <object-name>rearwing.L</object-name>
+  <object-name>fwdwing.R</object-name>
+  <object-name>rearwing.R</object-name>
+  <diffuse>
+    <red>0.0</red>
+    <green>0.0</green>
+    <blue>1.0</blue>
+  </diffuse>
+  <emission>
+    <red>0.0</red>
+    <green>0.0</green>
+    <blue>1.0</blue>
+  </emission>
+</animation>
 	<text>
 	 <name>norm</name>
 	  <font>lcd.txf</font>
@@ -155,6 +117,7 @@
       <y-m>-0.056</y-m>
       <z-m>-0.078</z-m>
     </offsets>
+		<draw-boundingbox type="bool">true</draw-boundingbox>
 	  <type type="string">literal</type>
 	  <text type="string">FUEL</text>
 	</text>
@@ -172,7 +135,7 @@
     </offsets>
 	  <type type="string">literal</type>
 	  <text type="string">ENG</text>
-		<draw-boundingbox type="bool">true</draw-boundingbox>
+
 	</text>
 	<text>
 	 <name>hydraulic</name>
@@ -186,6 +149,7 @@
       <y-m>-0.01</y-m>
       <z-m>-0.078</z-m>
     </offsets>
+
 	  <type type="string">literal</type>
 	  <text type="string">HYD</text>
 	</text>

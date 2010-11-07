@@ -866,14 +866,6 @@ Caja.R (rotándola deben aparecer)
 		</emission>
 	</animation>
 
-	<!--animation>
-		<type>noshadow</type>
-	        <object-name>Hook_0</object-name>
-		<object-name>Fire.L_0</object-name>
-		<object-name>Fire.R_0</object-name>
-	</animation-->
-
-
 
 <!-- Fire warning (still unused) -->
 

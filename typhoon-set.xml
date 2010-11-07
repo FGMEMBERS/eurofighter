@@ -17,14 +17,10 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
   <aircraft-version>1.4</aircraft-version>
   
   <flight-model>yasim</flight-model>
-  <!-- Stable version with G-limitatios:
-	  <aero>typhoon-yasim</aero> -->
-  <!-- Stable version without G-limitatios: -->
-	  <aero>typhoon-yasim-nog</aero>
-  <!-- Testing version with G-limitatios:
-	  <aero>typhoon-yasim-test</aero> -->
-  <!-- Testing version without G-limitaitons:
-	  <aero>typhoon-yasim-test-nog</aero> -->
+  <!-- Latest version with G-limitatios: -->
+	  <aero>typhoon-yasim</aero>
+  <!-- Latest version without G-limitaitons:
+	  <aero>typhoon-yasim-nog</aero> -->
   <fuel-fraction>0.4</fuel-fraction>
 
   <startup>
@@ -41,7 +37,7 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
       </autopilot>
      <!-- Autopilot for use on development FGFS 2.Git
      <autopilot>
-         <path>Aircraft/eurofighter/Systems/typhoon-autopilotv2.xml</path>
+         <path>Aircraft/eurofighter/Systems/typhoon-autopilot201.xml</path>
       </autopilot>  --> 
      <!-- Autopilot for older FGFS 1.9.1
      <autopilot>
@@ -541,18 +537,14 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 		                            <script>typhoon.RadarStop.open()</script>
 			              </binding>
 				</item>
-				<item>
-				 <label>Typhoon Autopilot</label>
-				 <binding>
-				 <command>nasal</command>
-				 <script>typhoon.APdialog.open()</script>
-				 </binding>
-				</item>
 			</menu>
 		</default>
 	</menubar>
   <stall-warning type="bool">true</stall-warning>
  </sim>
+
+<instrumentation include="Models/Instruments/instrumentation.xml">
+</instrumentation>
 
  <consumables>
   <fuel>
@@ -613,62 +605,14 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
  </engines>
 
 
- <!-- set prop for the manual "bookmark" arrow on the remote compas -->
- <instrumentation>
-   <enav n="0">
-	<selected type="int">3</selected>
-   </enav>
-  <radar>
-      <range type="int" archive="y">20</range>
-      <range-factor type="double" archive="n">0.001888</range-factor>
-      <minimized type="bool" archive="y">false</minimized>
-      <selected type="int">2</selected>
 
-      <!-- inicio en pruebas -->
-	<enabled type="bool">true</enabled>
-	<az-field type="double">120</az-field>
-	<range type="double">150</range>
-	<range-selected type="double">50</range-selected>
-	<radar2-range type="double">150</radar2-range>
-	<display-rdr type="bool">true</display-rdr>
-	<radar-standby type="int">1</radar-standby>
-	<mode>
-	    <rws type="bool">true</rws>
-	    <tws-auto type="bool">false</tws-auto>
-	</mode>
-
-  </radar>
-
-  <radar2>
-   <sweep-width-m type="double">0.0844</sweep-width-m>
-   <range-width-m type="double">0.0846</range-width-m>
-   <radius-ppi-display-m type="double">0.0846</radius-ppi-display-m>
-   <hud-eye-dist-m type="double">0.6705</hud-eye-dist-m>
-   <hud-radius-m type="double">0.071</hud-radius-m>
-  </radar2>
-
-   <radar-awg-9>
-	<ccm-mode-spl type="bool">false</ccm-mode-spl>
-	<ccm-mode-alt-dhf type="bool">false</ccm-mode-alt-dhf>
-	<ccm-mode-trs type="bool">false</ccm-mode-trs>
-	<display-rdr type="bool">true</display-rdr>
-	<display-ir type="bool">false</display-ir>
-	<display-iff type="bool">false</display-iff>
-	<mode type="string">PDS</mode> <!-- PDS, RWS, TWS, PDSTT, PSTT, VSL -->
-	<ant-trk-light type="bool">false</ant-trk-light>
-	<rd-rot-light type="bool">false</rd-rot-light>
-	<jat-light type="bool">false</jat-light>
-	<irot-light type="bool">false</irot-light>
-	</radar-awg-9>
-<!--en pruebas fin -->
-
-    <magnetic-compass>
-       <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
-    </magnetic-compass>
- </instrumentation>
 
  <!-- set up control properties for YASim -->
  <controls>
+	<lighting>
+		<instruments-norm type="float">0.4</instruments-norm>
+	</lighting>
+
 	<testing>
 		<None type="string"></None>
 	</testing>
@@ -767,9 +711,7 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 						<roll type="bool">true</roll>
 						<yaw type="bool">true</yaw>
 					</SAS-->
-  <switches>
-   <voice type="bool">true</voice>
-  </switches>
+
  </controls>
 
  <yasim>

@@ -1,132 +1,33 @@
 <?xml version="1.0"?>
 <PropertyList>
 
- <path>eng-status.ac</path>
+	<model>
+		<name>enav</name>
+    <path>Aircraft/eurofighter/Models/Instruments/enav.xml</path>
+    <offsets> 
+      <x-m>0.015</x-m>
+      <y-m>-0.001</y-m>
+      <z-m>0.006</z-m>
+    </offsets>
+	</model>
  
-
- <animation>
-	 <type>select</type>
-	 <object-name>EngEstatus</object-name>
-	 <condition>   
-		 <equals>
-			 <property>controls/HSD/on-off</property>
-			 <value>0</value>
-		 </equals>
-	 </condition>
- </animation>
-
 
 	<animation>
-		<type>rotate</type>
-		<object-name>rpm.L</object-name>
-		<property>engines/engine[0]/n1</property>
-		<factor>2</factor>
-		<center>
-			<x-m>0.0</x-m>
-			<y-m>-0.044</y-m>
-			<z-m>0.051</z-m>
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>rpm.R</object-name>
-		<property>engines/engine[1]/n1</property>
-		<factor>2</factor>
-		<center>
-			<x-m>0.0</x-m>
-			<y-m>0.046</y-m>
-			<z-m>0.051</z-m>
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
+	  <type>scale</type>
+	  <object-name>enav</object-name>
 
- <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.L1</object-name>
-	 <property>engines/engine[0]/n1</property>
-	 <factor>0.001</factor>
-	 <step>100.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.L2</object-name>
-	 <property>engines/engine[0]/n1</property>
-	 <factor>0.01</factor>
-	 <step>10.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- 
- <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.L3</object-name>
-	 <property>engines/engine[0]/n1</property>
-	 <factor>0.1</factor>
-	 <step>1.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.R1</object-name>
-	 <property>engines/engine[1]/n1</property>
-	 <factor>0.001</factor>
-	 <step>100.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.R2</object-name>
-	 <property>engines/engine[1]/n1</property>
-	 <factor>0.01</factor>
-	 <step>10.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- 
- <animation>
-	 <type>textranslate</type>
-	 <object-name>rpm1.R3</object-name>
-	 <property>engines/engine[1]/n1</property>
-	 <factor>0.1</factor>
-	 <step>1.0</step>
-	 <axis>
-		 <x>0</x>
-		 <y>-1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
+	  <x-factor>1.0</x-factor>
+	  <x-offset>1.0</x-offset>
+	  <y-factor>1.0</y-factor>
+	  <y-offset>1.4</y-offset>
+	  <z-factor>1.0</z-factor>
+	  <z-offset>1.4</z-offset>
+	  <center>
+	   <x-m>0.0</x-m>
+	   <y-m>0.0</y-m>
+	   <z-m>0.0</z-m>
+	  </center>
+	 </animation>
 
 	<text>
 	 <name>norm</name>
@@ -172,7 +73,7 @@
     </offsets>
 	  <type type="string">literal</type>
 	  <text type="string">ENG</text>
-		<draw-boundingbox type="bool">true</draw-boundingbox>
+
 	</text>
 	<text>
 	 <name>hydraulic</name>
@@ -201,6 +102,7 @@
       <y-m>0.015</y-m>
       <z-m>-0.078</z-m>
     </offsets>
+		<draw-boundingbox type="bool">true</draw-boundingbox>
 	  <type type="string">literal</type>
 	  <text type="string">WPT</text>
 	</text>
@@ -246,3 +148,5 @@
 </animation>
 
 </PropertyList>
+
+
