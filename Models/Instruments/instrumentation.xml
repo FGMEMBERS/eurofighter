@@ -3,12 +3,20 @@
   <PropertyList> 
 		<MFD>
 				<page-selected type="string">enav</page-selected>
+				<menu-selected type="string">norm</menu-selected>
+				<situana>
+						<grid-scale type="int">0</grid-scale>
+						<map-selected type="bool">false</map-selected>
+						<tracking type="bool">1</tracking>
+				</situana>
 		</MFD>
 		<MFD>
 				<page-selected type="string">engman</page-selected>
+				<menu-selected type="string">norm</menu-selected>
 		</MFD>
 		<MFD>
 				<page-selected type="string">radar</page-selected>
+				<menu-selected type="string">norm</menu-selected>
 		</MFD>
 
   <enav n="0">

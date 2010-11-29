@@ -606,9 +606,8 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
  </engines>
 
 
- <!-- set prop for the manual "bookmark" arrow on the remote compas -->
-<instrumentation include="Models/Instruments/instrumentation.xml">
-</instrumentation>
+ <instrumentation include="Models/Instruments/instrumentation.xml">
+ </instrumentation>
 
  <!-- set up control properties for YASim -->
  <controls>

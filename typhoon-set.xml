@@ -711,7 +711,9 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 						<roll type="bool">true</roll>
 						<yaw type="bool">true</yaw>
 					</SAS-->
-
+			<radar>
+					<on type="bool">true</on>
+			</radar>
  </controls>
 
  <yasim>

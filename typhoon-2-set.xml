@@ -639,8 +639,10 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
   </engine>
  </engines>
 
+
+
 <instrumentation include="Models/Instruments/instrumentation.xml">
-</instrumentation>
+ </instrumentation>
 
  <!-- set up control properties for YASim -->
  <controls>
@@ -746,6 +748,9 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
   <buttons>
    <FCS-override type="bool">true</FCS-override>
   </buttons>
+	<radar>
+			<on type="bool">true</on>
+	</radar>
   <switches>
    <voice type="bool">true</voice>
   </switches>

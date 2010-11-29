@@ -183,4 +183,37 @@
   </action>
 </animation>
 -->
+
+<!-- Situational Analysis page -->
+    <model>
+	<name>Situana</name>
+	    <path>Aircraft/eurofighter/Models/Instruments/situana.xml</path>
+	    <offsets> 
+	      <x-m>0.002</x-m>
+	      <y-m>0.0</y-m>
+	      <z-m>0.0</z-m>
+	</offsets>
+	</model>
+    <model>
+	<name>Situana Buttons</name>
+	    <path>Aircraft/eurofighter/Models/Instruments/situana0-btn.xml</path>
+	    <offsets> 
+	      <x-m>0.0</x-m>
+	      <y-m>0.0</y-m>
+	      <z-m>0.0</z-m>
+	</offsets>
+	</model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Situana</object-name>    
+    <object-name>Situana Buttons</object-name>    
+    <condition>
+        <equals>
+          <property>instrumentation/MFD[0]/page-selected</property>
+          <value>situana</value>
+        </equals>
+    </condition>
+  </animation>
+
   </PropertyList>
