@@ -10,12 +10,13 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 <PropertyList>
 
  <sim>
-
+   <variant-of>typhoon</variant-of>
+   
   <description>EFA Typhoon: AP 2.Git compatible</description>
   <author>Maverick Alex and others</author>
   <status>development</status>
   <aircraft-version>1.4</aircraft-version>
-  
+
   <flight-model>yasim</flight-model>
   <!-- Stable version with G-limitatios:
 	  <aero>typhoon-yasim</aero> -->
@@ -35,21 +36,21 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
       <electrical>
          <path>Aircraft/eurofighter/Systems/typhoon-electrical.xml</path>
       </electrical>
-     <!-- Autopilot for use on development FGFS 2.Git--> 
+     <!-- Autopilot for use on development FGFS 2.Git-->
      <autopilot>
          <path>Aircraft/eurofighter/Systems/typhoon-autopilotv2.xml</path>
       </autopilot>
      <!-- Autopilot for stable FGFS 2.0
      <autopilot>
          <path>Aircraft/eurofighter/Systems/typhoon-autopilot200v2.xml</path>
-      </autopilot> --> 
+      </autopilot> -->
      <!-- Autopilot for older FGFS 1.9.1
      <autopilot>
          <path>Aircraft/eurofighter/Systems/typhoon-autopilot191.xml</path>
-      </autopilot>  --> 
+      </autopilot>  -->
 
-  </systems> 
- 
+  </systems>
+
   <!--systems>
       <electrical>
          <path>Aircraft/Generic/generic-electrical.xml</path>
@@ -57,8 +58,8 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
      <autopilot>
          <path>Aircraft/eurofighter/autopilotV1.xml</path>
       </autopilot>
-  </systems--> 
- 
+  </systems-->
+
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
 
@@ -66,7 +67,7 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
    <path>Aircraft/eurofighter/Sounds/typhoon-sound.xml</path>
   </sound>
 <!--
-  <submodels> 
+  <submodels>
     <serviceable type="bool">true</serviceable>
     <path>Aircraft/sabre/Models/submodels.xml</path>
   </submodels>
@@ -148,9 +149,9 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
     <wingmounts type="bool">false</wingmounts> <!-- dejamos de verlos? -->
          <!-- aquí se puden incluir estos, pero cambian todos los nombres de propiedades !!!:
 	controls hud instrumentation lighting modeling systems
-	 --> 
+	 -->
   </typhoon>
-  </model> 
+  </model>
 		<multiplay>
 			<generic>
 				<float n="1">0.0</float> <!-- loads? -->
@@ -506,7 +507,7 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 		</weight>
 	<menubar>
 		<default>
-			
+
 			<menu n="10">
 			<label>Extras</label>
 				<enabled type="bool">true</enabled>
@@ -738,7 +739,7 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
    <!--canopy>
       <position-norm type="float">1.0</position-norm>
    </canopy-->
- 
+
 					<!--SAS>
 						<pitch type="bool">true</pitch>
 						<roll type="bool">true</roll>
@@ -765,16 +766,16 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
  <!-- Map Keys -->
  <input>
     <keyboard>
-        <!-- Carrier ops (seahawk) --> 
-        <key n="76"> 
+        <!-- Carrier ops (seahawk) -->
+        <key n="76">
           <name>L</name>
           <desc>Launch-bar engage.</desc>
-          <binding> 
+          <binding>
             <command>property-toggle</command>
             <property>/controls/gear/launchbar</property>
           </binding>
         </key>
-        <key n="79"> 
+        <key n="79">
           <name>O</name>
           <desc>Hook down.</desc>
           <binding>
@@ -783,13 +784,13 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
             <!-- <command>property-assign</command>
             <property>/controls/gear/tailhook</property>
             <value type="double">1.0</value> -->
-          </binding> 
+          </binding>
         </key>
 
-        <key n="67"> 
+        <key n="67">
           <name>C</name>
           <desc>Catapult Launch Command.</desc>
-          <binding> 
+          <binding>
             <command>property-toggle</command>
             <property>/controls/gear/catapult-launch-cmd</property>
           </binding>
@@ -797,16 +798,16 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 	<key n="4">
 		<name>Ctrl-d</name>
 	        <desc>Toggle Canopy</desc>
-	          <binding> 
+	          <binding>
 	          	<command>nasal</command>
 			<script>typhoon.canopy.toggle();</script>
 		  </binding>
 	</key>
 
-      <key n="78"> 
+      <key n="78">
         <name>N</name>
         <desc>Extend Speedbrakes</desc>
-        <binding> 
+        <binding>
           <command>property-adjust</command>
           <property>/controls/flight/speedbrake</property>
           <step type="double">0.2</step>
@@ -814,10 +815,10 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
           <max type="double">1</max>
         </binding>
       </key>
-      <key n="110"> 
+      <key n="110">
         <name>n</name>
         <desc>Retract Speedbrakes</desc>
-        <binding> 
+        <binding>
           <command>property-adjust</command>
           <property>/controls/flight/speedbrake</property>
           <step type="double">-0.2</step><!-- with +.33 and -.2 do QNAN -->
@@ -916,7 +917,3 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
   </nasal>
 
 </PropertyList>
-
-
-
-
