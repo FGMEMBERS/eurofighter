@@ -15,6 +15,22 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
   <author>Maverick Alex and others</author>
   <status>development</status>
   <aircraft-version>1.4</aircraft-version>
+
+  <tags>
+    <tag>fighter</tag>
+    <tag>1990s</tag>
+    <tag>2000s</tag>
+    <tag>2010s</tag>
+    <tag>canard</tag>
+    <tag>delta</tag>
+    <tag>glass-cockpit</tag>
+    <tag>hud</tag>
+    <tag>ifr</tag>
+    <tag>retractable-gear</tag>
+    <tag>supersonic</tag>
+    <tag>afterburner</tag>
+    <tag>jet</tag>
+  </tags>
   
   <flight-model>yasim</flight-model>
   <!-- Latest version with G-limitatios: -->
